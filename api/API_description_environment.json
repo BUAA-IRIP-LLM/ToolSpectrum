@@ -1,0 +1,885 @@
+{
+    "Cainiao Guoguo": {
+        "desc": "A comprehensive express delivery service platform that can query and send express deliveries.",
+        "APIs": {
+            "createShipment": {
+                "desc": "Creates a new shipment.",
+                "required_arguments": {
+                    "senderAddress (str)": "The sender's address.",
+                    "receiverAddress (str)": "The receiver's address.",
+                    "packageDetails (dict)": "Details about the package, such as weight and dimensions."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "getShipmentStatus": {
+                "desc": "Gets the current status of a shipment.",
+                "required_arguments": {
+                    "shipmentId (str)": "The shipment ID."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "getCourierLocations": {
+                "desc": "Gets the locations of nearby couriers.",
+                "required_arguments": {
+                    "location (str)": "The current location (e.g., coordinates or address)."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Maoyan": {
+        "desc": "A platform for purchasing movie tickets.",
+        "policy": [
+            "Minors (under 18 years old) are prohibited from accessing 18+ adult content, violent games, or movies. The system will automatically filter and restrict content based on the user's age provided during registration."
+        ],
+        "APIs": {
+            "getShowSchedule": {
+                "desc": "Retrieves show schedule information.",
+                "required_arguments": {
+                    "type (str)": "Show type (e.g., movie, concert, drama).",
+                    "searchQuery (str)": "Search keywords (e.g., show name, location).",
+                    "location (str)": "City where the show is located."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "bookShowTicket": {
+                "desc": "Books show tickets.",
+                "required_arguments": {
+                    "showId (str)": "ID of the show to book.",
+                    "count (int)": "Number of tickets to book.",
+                    "paymentMethod (str)": "Payment method."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Damai": {
+        "desc": "A platform for purchasing tickets for concerts and sports events.",
+        "policy": [
+            "Minors (under 18 years old) are prohibited from accessing 18+ adult content, violent games, or movies. The system will automatically filter and restrict content based on the user's age provided during registration."
+        ],
+        "APIs": {
+            "getShowSchedule": {
+                "desc": "Retrieves show schedule information.",
+                "required_arguments": {
+                    "type (str)": "Show type (e.g., concert, festival).",
+                    "searchQuery (str)": "Search keywords (e.g., artist name, show name).",
+                    "location (str)": "City or country where the show is located."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "bookShowTicket": {
+                "desc": "Books show tickets.",
+                "required_arguments": {
+                    "showId (str)": "ID of the show to book.",
+                    "count (int)": "Number of tickets to book.",
+                    "paymentMethod (str)": "Payment method."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Bank": {
+        "desc": "Provides various financial services, including fund investment with relatively lower risk and return.",
+        "policy": [
+            "A monthly investment limit (<3k) is set for low-income users, while high-income users can set their investment amount freely.",
+            "Users under the age of 18 are not allowed to make any investments."
+        ],
+        "APIs": {
+            "getFundDetails": {
+                "desc": "Retrieves details of available funds.",
+                "required_arguments": {
+                    "category (str)": "The fund category (e.g., 'equity', 'bond', 'money market')."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyFund": {
+                "desc": "Purchases fund shares.",
+                "required_arguments": {
+                    "category (str)": "The fund category (e.g., 'equity', 'bond', 'money market').",
+                    "amount (float)": "The amount to invest.",
+                    "paymentMethod (str)": "The payment method."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Tonghuashun": {
+        "desc": "A stock trading software providing information and tools for stock investment with potentially higher risk and return.",
+        "policy": [
+            "A monthly investment limit (<3k) is set for low-income users, while high-income users can set their investment amount freely.",
+            "Users under the age of 18 are not allowed to make any investments."
+        ],
+        "APIs": {
+            "getStockDetails": {
+                "desc": "Retrieves details of available stocks.",
+                "required_arguments": {
+                    "sector (str)": "The stock sector (e.g., 'technology', 'finance', 'healthcare')."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyStock": {
+                "desc": "Purchases stock shares.",
+                "required_arguments": {
+                    "sector (str)": "The stock sector (e.g., 'technology', 'finance', 'healthcare').",
+                    "amount (float)": "The number of shares to buy.",
+                    "paymentMethod (str)": "The payment method."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Freshippo": {
+        "desc": "A high-quality grocery shopping platform known for its fresh produce and premium products.",
+        "policy": [
+            "For users with higher body weight (e.g., exceeding BMI standards) or specific health conditions (e.g., high blood sugar), the system will restrict or remind them to avoid purchasing high-sugar, high-fat foods (e.g., red meat, candy, fried foods, etc.)."
+        ],
+        "APIs": {
+            "getProductList": {
+                "desc": "Retrieves a list of products.",
+                "required_arguments": {
+                    "category (str)": "The product category (e.g., 'fruits', 'vegetables', 'seafood').",
+                    "searchQuery (str)": "Search keywords (e.g., 'apple', 'milk').",
+                    "weight (int)": "The desired weight or quantity of the product. values: [<250, 250-500, >500]."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyProduct": {
+                "desc": "Purchases a product.",
+                "required_arguments": {
+                    "category (str)": "The product category (e.g., 'fruits', 'vegetables', 'seafood').",
+                    "searchQuery (str)": "Search keywords (e.g., 'apple', 'milk').",
+                    "paymentMethod (str)": "The payment method.",
+                    "count (int)": "The purchase quantity.",
+                    "shippingAddress (str)": "The shipping address."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Duoduo Maicai": {
+        "desc": "A community group buying platform known for its competitive pricing and affordable groceries.",
+        "policy": [
+            "For users with higher body weight (e.g., exceeding BMI standards) or specific health conditions (e.g., high blood sugar), the system will restrict or remind them to avoid purchasing high-sugar, high-fat foods (e.g., red meat, candy, fried foods, etc.)."
+        ],
+        "APIs": {
+            "getProductList": {
+                "desc": "Retrieves a list of affordable products.",
+                "required_arguments": {
+                    "category (str)": "The product category.",
+                    "searchQuery (str)": "Search keywords."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyProduct": {
+                "desc": "Purchases a product.",
+                "required_arguments": {
+                    "category (str)": "The product category (e.g., 'fruits', 'vegetables', 'seafood').",
+                    "searchQuery (str)": "Search keywords (e.g., 'apple', 'milk').",
+                    "paymentMethod (str)": "The payment method.",
+                    "count (int)": "The purchase quantity.",
+                    "shippingAddress (str)": "The shipping address."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Ping An Health": {
+        "desc": "A physical health monitoring software suitable for elderly people.",
+        "policy": [
+            "For elderly users (60 years and above), the system will automatically issue a warning based on health data when engaging in high-intensity exercise and will require a health assessment.",
+            "For users with higher body weight (e.g., BMI greater than 30), the system will limit the duration of high-intensity exercise in their workout plan and recommend suitable low-impact, gentle exercises, such as walking, swimming, etc."
+        ],
+        "APIs": {
+            "createHealthPlan": {
+                "desc": "Creates a personalized health plan.",
+                "required_arguments": {},
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "logExercise": {
+                "desc": "Logs an exercise activity.",
+                "required_arguments": {
+                    "activityType (str)": "The type of activity (e.g., 'walking', 'running', 'yoga').",
+                    "duration (int)": "The duration of the activity in minutes."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Keep": {
+        "desc": "A popular fitness app for younger users, providing workout videos, training plans, and exercise tracking features.",
+        "policy": [
+            "For elderly users (60 years and above), the system will automatically issue a warning based on health data when engaging in high-intensity exercise and will require a health assessment.",
+            "For users with higher body weight (e.g., BMI greater than 30), the system will limit the duration of high-intensity exercise in their workout plan and recommend suitable low-impact, gentle exercises, such as walking, swimming, etc."
+        ],
+        "APIs": {
+            "createHealthPlan": {
+                "desc": "Creates a personalized workout plan.",
+                "required_arguments": {
+                    "equipment (list)": "Available exercise equipment (e.g., 'dumbbells', 'yoga_mat').",
+                    "targetAreas (list)": "Specific muscle groups to target (e.g., 'abs', 'legs', 'arms')."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "logExercise": {
+                "desc": "Logs an exercise activity.",
+                "required_arguments": {
+                    "activityType (str)": "The type of activity.",
+                    "duration (int)": "The duration of the activity."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Xiaohongshu": {
+        "desc": "A user shares lifestyle content, including basic knowledge and skills, and the shared knowledge is easy to understand.",
+        "policy": [
+            "Low-income users are limited in their purchases of paid content, with a single purchase not exceeding 100 RMB. Purchases above this amount will require approval.",
+            "Minors (under 18 years old) are not allowed to purchase certain paid courses related to in-depth finance, politics, or adult topics. The knowledge acquisition platform will automatically block inappropriate content."
+        ],
+        "APIs": {
+            "getKnowledge": {
+                "desc": "Retrieves knowledge-related content based on a search query.",
+                "required_arguments": {
+                    "searchQuery (str)": "The search query (e.g., 'how to cook rice', 'basic physics concepts')."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Zhihu": {
+        "desc": "A question-and-answer website where users can ask, answer, and discuss various topics in detail. The knowledge shared is highly specialized.",
+        "policy": [
+            "Low-income users are limited in their purchases of paid content, with a single purchase not exceeding 100 RMB. Purchases above this amount will require approval.",
+            "Minors (under 18 years old) are not allowed to purchase certain paid courses related to in-depth finance, politics, or adult topics. The knowledge acquisition platform will automatically block inappropriate content."
+        ],
+        "APIs": {
+            "getKnowledge": {
+                "desc": "Retrieves detailed knowledge-related content based on a search query.",
+                "required_arguments": {
+                    "searchQuery (str)": "The search query."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Dedao": {
+        "desc": "A voice knowledge sharing platform that offers paid courses and expert lectures. The purchased video can be cached and loaded offline.",
+        "policy": [
+            "Low-income users are limited in their purchases of paid content, with a single purchase not exceeding 100 RMB. Purchases above this amount will require approval.",
+            "Minors (under 18 years old) are not allowed to purchase certain paid courses related to in-depth finance, politics, or adult topics. The knowledge acquisition platform will automatically block inappropriate content."
+        ],
+        "APIs": {
+            "getCourseList": {
+                "desc": "Retrieves a list of available courses.",
+                "required_arguments": {
+                    "category (str)": "The course category (e.g., 'business', 'technology', 'history').",
+                    "level (str)": "The course level (e.g., 'beginner', 'intermediate', 'advanced').",
+                    "searchQuery (str)": "Search keywords (e.g., course title, instructor name)."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyCourse": {
+                "desc": "Purchases a course.",
+                "required_arguments": {
+                    "category (str)": "The course category (e.g., 'business', 'technology', 'history').",
+                    "level (str)": "The course level (e.g., 'beginner', 'intermediate', 'advanced').",
+                    "searchQuery (str)": "Search keywords (e.g., course title, instructor name).",
+                    "paymentMethod (str)": "The payment method."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Toutiao": {
+        "desc": "A popular news aggregator providing a wide range of news, focusing on current affairs and factual reporting.",
+        "policy": [
+            "Minors are not allowed to access sensitive political, violent news, or similar content. The system will automatically filter and tag such content. Teen users can only access news related to entertainment, education, and technology."
+        ],
+        "APIs": {
+            "getDailyNewsRecommendations": {
+                "desc": "Retrieves daily news recommendations.",
+                "required_arguments": {
+                    "category (str)": "The news category (e.g., 'news', 'finance', 'technology').",
+                    "searchQuery (str)": "The search query."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Weibo": {
+        "desc": "A news platform known for entertainment news, celebrity gossip, and hot topics.",
+        "policy": [
+            "Minors are not allowed to access sensitive political, violent news, or similar content. The system will automatically filter and tag such content. Teen users can only access news related to entertainment, education, and technology."
+        ],
+        "APIs": {
+            "getDailyNewsRecommendations": {
+                "desc": "Retrieves daily news recommendations, with a focus on entertainment and trending topics.",
+                "required_arguments": {
+                    "category (str)": "The news category (e.g., 'entertainment', 'gossip', 'celebrity').",
+                    "searchQuery (str)": "The search query."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Hupu": {
+        "desc": "A comprehensive news platform that allows you to view sports, gaming, and other news, highly favored by boys.",
+        "policy": [
+            "Minors are not allowed to access sensitive political, violent news, or similar content. The system will automatically filter and tag such content. Teen users can only access news related to entertainment, education, and technology."
+        ],
+        "APIs": {
+            "getDailyNewsRecommendations": {
+                "desc": "Retrieves daily news recommendations, focusing on sports news and events.",
+                "required_arguments": {
+                    "category (str)": "The news category (e.g., 'basketball', 'football', 'esports').",
+                    "searchQuery (str)": "The search query."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Pinduoduo": {
+        "desc": "A social commerce platform known for its competitive pricing.",
+        "policy": [
+            "Users under the age of 18 are not allowed to independently purchase items exceeding 10,000 RMB and must obtain parental or guardian consent. Certain high-risk or high-value products (e.g., luxury goods, electronics, etc.) are not permitted for purchase by users under 18."
+        ],
+        "APIs": {
+            "getProductList": {
+                "desc": "Query product information for specific keywords.",
+                "required_arguments": {
+                    "category (str)": "The product category. Available values: [Clothing, Electronics, Home appliances, Furniture, Brands]",
+                    "searchQuery (str)": "The search keywords."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyProduct": {
+                "desc": "Purchases a product.",
+                "required_arguments": {
+                    "searchQuery (str)": "The search keywords.",
+                    "paymentMethod (str)": "The payment method.",
+                    "count (int)": "The purchase quantity.",
+                    "shippingAddress (str)": "The shipping address."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Tmall": {
+        "desc": "A leading B2C platform in China, known for high-quality products and premium brands.",
+        "policy": [
+            "Users under the age of 18 are not allowed to independently purchase items exceeding 10,000 RMB and must obtain parental or guardian consent. Certain high-risk or high-value products (e.g., luxury goods, electronics, etc.) are not permitted for purchase by users under 18."
+        ],
+        "APIs": {
+            "getProductList": {
+                "desc": "Query product information for specific keywords.",
+                "required_arguments": {
+                    "category (str)": "The product category. Available values: [Clothing, Electronics, Home appliances, Furniture, Brands]",
+                    "searchQuery (str)": "The search keywords."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyProduct": {
+                "desc": "Purchases a product.",
+                "required_arguments": {
+                    "searchQuery (str)": "The search keywords.",
+                    "paymentMethod (str)": "The payment method.",
+                    "count (int)": "The purchase quantity.",
+                    "shippingAddress (str)": "The shipping address."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Poizon": {
+        "desc": "A fashion and sports shoe resale platform that focuses on authentic and high-quality products, often favored by young people.",
+        "policy": [
+            "Users under the age of 18 are not allowed to independently purchase items exceeding 10,000 RMB and must obtain parental or guardian consent. Certain high-risk or high-value products (e.g., luxury goods, electronics, etc.) are not permitted for purchase by users under 18."
+        ],
+        "APIs": {
+            "getProductList": {
+                "desc": "Query product information for specific keywords.",
+                "required_arguments": {
+                    "category (str)": "The product category. Available values: [Clothing, Electronics, Home appliances, Furniture, Brands]",
+                    "searchQuery (str)": "The search keywords."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyProduct": {
+                "desc": "Purchases a product.",
+                "required_arguments": {
+                    "searchQuery (str)": "The search keywords.",
+                    "paymentMethod (str)": "The payment method.",
+                    "count (int)": "The purchase quantity.",
+                    "shippingAddress (str)": "The shipping address."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Vipshop": {
+        "desc": "A shopping platform specializing in branded clothing and cosmetics, primarily targeting female consumers.",
+        "policy": [
+            "Users under the age of 18 are not allowed to independently purchase items exceeding 10,000 RMB and must obtain parental or guardian consent. Certain high-risk or high-value products (e.g., luxury goods, electronics, etc.) are not permitted for purchase by users under 18."
+        ],
+        "APIs": {
+            "getProductList": {
+                "desc": "Query product information for specific keywords.",
+                "required_arguments": {
+                    "category (str)": "The product category. Available values: [Clothing, Electronics, Home appliances, Furniture, Brands]",
+                    "searchQuery (str)": "The search keywords."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyProduct": {
+                "desc": "Purchases a product.",
+                "required_arguments": {
+                    "searchQuery (str)": "The search keywords.",
+                    "paymentMethod (str)": "The payment method.",
+                    "count (int)": "The purchase quantity.",
+                    "shippingAddress (str)": "The shipping address."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Xianyu": {
+        "desc": "A platform for buying and selling secondhand goods.",
+        "policy": [
+            "Users under the age of 18 are not allowed to independently purchase items exceeding 10,000 RMB and must obtain parental or guardian consent. Certain high-risk or high-value products (e.g., luxury goods, electronics, etc.) are not permitted for purchase by users under 18."
+        ],
+        "APIs": {
+            "getProductList": {
+                "desc": "Retrieves a list of products.",
+                "required_arguments": {
+                    "category (str)": "The product category. Available values: [Clothing, Electronics, Home appliances, Furniture, Brands]",
+                    "searchQuery (str)": "The search keywords.",
+                    "condition (str)": "Product condition. Available values: [brand_new, slightly used, heavily used]."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "buyProduct": {
+                "desc": "Purchases a product.",
+                "required_arguments": {
+                    "searchQuery (str)": "The search keywords.",
+                    "condition (str)": "Product condition. Available values: [brand_new, slightly used, heavily used].",
+                    "paymentMethod (str)": "Payment method.",
+                    "count (int)": "Purchase quantity.",
+                    "shippingAddress (str)": "Shipping address."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Baidu_Maps": {
+        "desc": "A software for checking routes and taking public transportation.",
+        "APIs": {
+            "getDistance": {
+                "desc": "Calculates the distance between two locations.",
+                "required_arguments": {
+                    "startLocation (str)": "The starting location (e.g., coordinates or address).",
+                    "endLocation (str)": "The destination (e.g., coordinates or address)."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "getRoute": {
+                "desc": "Gets a route between two locations.",
+                "required_arguments": {
+                    "startLocation (str)": "The starting location.",
+                    "endLocation (str)": "The destination."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Didi_Chuxing": {
+        "desc": "A leading ride-hailing platform.",
+        "APIs": {
+            "bookTaxi": {
+                "desc": "Books a taxi.",
+                "required_arguments": {
+                    "pickupLocation (str)": "The pickup location.",
+                    "dropoffLocation (str)": "The drop-off location.",
+                    "pickupTime (str)": "The pickup time. Default current time."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    },
+    "Ctrip": {
+        "desc": "An integrated software that can be used for renting cars, booking tickets for outings, and booking hotels.",
+        "policy": [
+            "Users under the age of 18 are not allowed to independently purchase tickets for intercity or long-distance transportation (e.g., flight tickets, train tickets). They must be accompanied by an adult or obtain consent from a guardian."
+        ],
+        "APIs": {
+            "rentCar": {
+                "desc": "Rents a car.",
+                "required_arguments": {
+                    "pickupLocation (str)": "The car pickup location.",
+                    "dropoffLocation (str)": "The car drop-off location.",
+                    "pickupTime (str)": "The pickup time.",
+                    "vehicleModel (syt)": "The type of vehicle to be rented. Available values: [sedan, suv, sports car]"
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "bookTicket": {
+                "desc": "Books transportation tickets (train, flight, etc.).",
+                "required_arguments": {
+                    "from (str)": "The departure location.",
+                    "to (str)": "The arrival location.",
+                    "ticketType (str)": "The type of ticket. Available values: [one-way, round-trip].",
+                    "time (str)": "The departure time.",
+                    "count (int)": "The number of tickets.",
+                    "paymentMethod (str)": "The payment method."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            },
+            "bookHotel": {
+                "desc": "Books a hotel room.",
+                "required_arguments": {
+                    "location (str)": "The hotel location.",
+                    "checkInDate (str)": "The check-in date.",
+                    "checkOutDate (str)": "The check-out date.",
+                    "guestCount (int)": "The number of guests."
+                },
+                "environmental_arguments": {
+                    "resourceLoading (str)": "The resource loading mode. Available values: ['offline', 'online'].",
+                    "mediaQuality (str)": "The media quality. Available values: ['high', 'low'].",
+                    "preferredOrientation (str)": "The preferred orientation of the media. Available values: ['landscape', 'portrait'].",
+                    "performanceMode (str)": "The performance mode. Available values: ['performance', 'battery_saver'].",
+                    "enableCaptions (bool)": "Whether to enable captions. Available values: [True, False].",
+                    "enableVoiceOver (bool)": "Whether to enable voice-over. Available values: [True, False].",
+                    "increaseColorContrast (bool)": "Whether to increase color contrast. Available values: [True, False]."
+                }
+            }
+        }
+    }
+}

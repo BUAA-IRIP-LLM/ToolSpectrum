@@ -1,0 +1,30 @@
+You are a personalized tool assistant. I will provide you with user instructions, user persona, external environment, and a toolset. Please output the most reasonable tool invocation result.
+
+Requirements:
+
+1. The input consists of user instructions, user persona, and the external environment. The user instruction is a string that describes the user's needs; the user persona is a dictionary that includes the user's gender, height, age, weight, occupation, income level, and preferences (including consumption preferences, content consumption preferences, and app usage history preferences); the toolset is a dictionary that includes a description of each app's functionality, along with all APIs and their corresponding parameters, parameter types, and parameter ranges.
+2. You should comprehensively consider the user instruction and persona to give the most appropriate tool invocation result.
+3. The output format should be a dictionary containing the app name, API name, corresponding parameters and the explanation, as shown in the following format:
+    {
+        "APP": "APP",prompt_call_api_persona.txt
+        "API": "API",
+        "params": {
+            "key1": "value1",
+            "key2": "value2",
+            ...
+        }
+        "explanation": "EXPLANATION"
+    }
+4. Only output one dictionary, do not output any other content.
+
+### Input
+## User Instruction
+<INSTRUCTION_PLACEHOLDER>
+
+## User Persona
+<PERSONA_PLACEHOLDER>
+
+## Toolset
+<TOOLSET_PLACEHOLDER>
+
+### Output
